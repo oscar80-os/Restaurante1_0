@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Selector header*/
+
+header {
+    background: rgba(186, 37, 37, 0.863);  /*color de fondo de la barra de navegacion*/
+    width: 100%;  /*ancho del contenedor para que cubra la totalidad de la pantalla*/
+    position: fixed; /*el menu se queda quieto o fijo y nos acompaña en todo momento */
+    z-index: 100;/*posision de ñla navegacion en este caso se sobre pondra de los demas elementos*/
+    
+}
+
+nav{
+    float: right; /*barra de navegacion a la derecha*/
+}
+
+/*Lista de la barra de navegacion*/
+
+nav ul {
+    list-style: none; /*elimina el subrallado a la  viñeta en nuestro caso ninguna o se none*/
+    overflow: hidden;/*Todo contenido fuera del bloque se cortara y sera invisible en si elimina los errorres que se puedadn dar por contenido fuera dl bloque */ 
+}
+
+/*Sub menus*/
+
+nav ul li {
+    float: left; /*consigue que la barra se muestre horizontalmente*/
+    font-family: Georgia, 'Times New Roman', Times, serif;/*tipo de fuente*/
+} 
+
+/*Elementos a de enlace*/
+nav ul li a {
+    display: block; /*con vierte en un bloque los elementos anchor*/
+    padding: 25px;/*separacion de los elementos*/
+    color: black;/*color de la letra*/
+    text-decoration: none; /*Le quita el subrayado a los elementos*/
+   
+}
+nav ul li:hover {
+    background: rgb(97, 200, 198);
+    border-radius: 2%;
+}
+
+/*logo header*/
+
+.logo_header {
+    width: 7%;
+    position: fixed;
+    padding: 10px 0 0 20px;
+}
+
+.titulo_header {
+    position: fixed;
+    
+    padding: 25px 0 0 100px;
+    color:  rgb(97, 200, 198);
+}
+
+    
+
+main div img  {
+    position: absolute;
+    top: 8rem;
+    left: 25rem;
+}
+
+main div h2 {
+    position: absolute;
+    top: 20rem;
+    left: 7rem;
+    width: 80%;
+    text-align: justify;
+}
+
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+
+    header{
+        height: 250px;
+    }
+
+    .titulo_header{
+        position: absolute;
+        top: 150px;
+    }
+
+    .logo_header{
+        width: 20%;
+        position: absolute;
+        top: 120px;
+        left: 200px;
+    }
+
+    .logo_bienvenida{
+       width: 80%;
+       padding: 290px 35px;
+    }
+    .bienvenida{
+        width: 80%;
+        position: absolute;
+        top: 35rem;
+        left: 0.5rem;
+    }
+  
+    .ttitulo_header {
+      padding: 18px 0 0 100px;
+    }
+  
+    main div img {
+      position: static;
+      width: 100%;
+    }
+  
+    main div h2 {
+      position: static;
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
